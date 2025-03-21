@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const isDark = html.classList.toggle("dark");
+            localStorage.setItem("darkMode", isDark);
+        }
+
+        // Apply Dark Mode Preference
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("darkMode") === "true") {
+                document.documentElement.classList.add("dark");
+            }
+        });
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300 transition-colors duration-300">
+    
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-md fixed w-full top-0 left-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="Art Showcase Logo" class="h-10 mr-3">
+                <h1 class="text-xl font-bold">BS Computer Science Art Exhibition</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="gallery.html" class="text-gray-300 hover:text-white">Gallery</a></li>
+                    <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="flex mt-16">
+    <!-- Left Sidebar -->
+    <aside class="w-64 bg-gray-900 dark:bg-gray-800 shadow-md fixed top-16 left-0 p-6 h-screen">
+        <h2 class="text-xl font-bold mb-4 text-gray-200">Categories</h2>
+        <ul class="space-y-3">
+            <li><a href="gallery.html" class="text-gray-400 hover:text-white">All Artworks</a></li>
+                <li><a href="digitalart.html" class="text-gray-400 hover:text-white">Digital Art</a></li>
+                <li><a href="traditionalart.html" class="text-gray-400 hover:text-white">Traditional Art</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content (Centered) -->
+    <main class="flex-1 mx-auto max-w-4xl px-6 py-12">
+        <section id="gallery">
+            <h2 class="shadow-md rounded-lg text-2xl font-bold mb-6 bg-gray-800 text-center w-full py-2 text-gray-200">
+                Son Goku Travel The Milky Way
+            </h2>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <article>
+                    <div class="artwork mb-4">
+                        <img src="images/art6.jpg" alt="Goku" class="w-full h-auto object-contain rounded-lg">
+                    </div>
+                    <div class="author flex items-center space-x-4">
+                        <p class="text-lg font-medium text-gray-300">John Daniel - Artist</p>
+                    </div>
+                    <p class="text-gray-400 mt-4">
+                        This artwork captures the beauty of nature through vibrant colors and intricate details.
+                    </p>
+                </article>
+
+                <!-- Comment Box -->
+                <div class="mt-8 bg-gray-700 p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-200">Leave a Comment</h3>
+                    <form action="https://formspree.io/f/xeoaaajk" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-300">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full p-2 border rounded bg-gray-800 border-gray-600 text-gray-200">
+                        </div>
+                        <div>
+                            <label for="comment" class="block text-gray-300">Your Comment</label>
+                            <textarea id="comment" name="comment" rows="4" required class="w-full p-2 border rounded bg-gray-800 border-gray-600 text-gray-200"></textarea>
+                        </div>
+                        <!-- Hidden field for Artwork Title -->
+                        <input type="hidden" id="artwork" name="artwork" value="Son Goku Travel The Milky Way">
+
+                        <p>your comment will be sent to us via Formspree.io</p>
+                        <button type="submit" class="w-full bg-gray-600 text-white py-2 rounded hover:bg-gray-500">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Right Sidebar -->
+        <aside class="w-64 bg-gray-800 shadow-md h-screen fixed top-16 right-0 p-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-300">Quotes:</h2>
+            <ul class="space-y-3">
+                <li><p>“If you hear a voice within you say, ‘You cannot paint,’ then by all means paint, and that voice will be silenced”<br>– <b>Vincent Van Gogh</b></p></li>
+                <li><br><p>“We don’t make mistakes, just happy little accidents.”<br>– <b>Bob Ross</b></p></li>
+                <li><br><p>“Creativity is contagious, pass it on.”<br>– <b>Albert Einstein</b></p></li>
+                <li><br><p>“Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep.”<br>– <b>Scott Adams</b></p></li>
+            </ul>
+        </aside>
+</div>
+
+</body>
+</html>

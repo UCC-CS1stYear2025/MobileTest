@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Art Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+        }
+        body {
+            overflow: scroll;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                document.body.innerHTML = "<div class='flex items-center justify-center min-h-screen text-2xl font-bold text-gray-200'>Not available for mobile users at the moment</div>";
+            }
+        });
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-300 transition-colors duration-300">
+    <header class="bg-gray-800 shadow-md fixed w-full top-0 left-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="Art Showcase Logo" class="h-10 mr-3">
+                <h1 class="text-xl font-bold text-gray-200">BS Computer Science Art Exhibition</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="gallery.html" class="text-gray-300 hover:text-white">Gallery</a></li>
+                    <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="flex">
+        <aside class="w-64 bg-gray-800 shadow-md h-screen fixed top-16 left-0 p-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-200">Categories</h2>
+            <ul class="space-y-3">
+                <li><a href="#" class="text-gray-400 hover:text-white">All Artworks</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Digital Art</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Traditional Art</a></li>
+            </ul>
+        </aside>
+        
+        <div class="flex-1 flex items-center justify-center min-h-screen ml-64 mr-64">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold mb-4 text-gray-200">🎉 Welcome to BSCS Online Art Exhibition 🎉</h1>
+                <p class="text-gray-400 mb-6">Discover stunning artworks from 1st year Computer Science students of UCC.</p>
+                <a href="gallery.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-500">Enter Gallery</a>
+            </div>
+        </div>
+
+        <aside class="w-64 bg-gray-800 shadow-md h-screen fixed top-16 right-0 p-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-300">Quotes:</h2>
+            <ul class="space-y-3">
+                <li><p>“If you hear a voice within you say, ‘You cannot paint,’ then by all means paint, and that voice will be silenced”<br>– <b>Vincent Van Gogh</b></p></li>
+                <li><br><p>“We don’t make mistakes, just happy little accidents.”<br>– <b>Bob Ross</b></p></li>
+                <li><br><p>“Creativity is contagious, pass it on.”<br>– <b>Albert Einstein</b></p></li>
+                <li><br><p>“Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep.”<br>– <b>Scott Adams</b></p></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+    <header class="bg-gray-800 shadow-md fixed w-full top-0 left-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="Art Showcase Logo" class="h-10 mr-3">
+                <h1 class="text-xl font-bold">BS Computer Science Art Exhibition</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="gallery.html" class="text-gray-300 hover:text-white">Gallery</a></li>
+                    <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="flex mt-16">
+        <!-- Left Sidebar -->
+        <aside class="w-64 bg-gray-800 shadow-md h-screen fixed top-16 left-0 p-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-300">Categories</h2>
+            <ul class="space-y-3">
+                <li><a href="gallery.html" class="text-gray-400 hover:text-white">All Artworks</a></li>
+                <li><a href="digitalart.html" class="text-gray-400 hover:text-white">Digital Art</a></li>
+                <li><a href="traditionalart.html" class="text-gray-400 hover:text-white">Traditional Art</a></li>
+            </ul>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="container mx-auto px-6 py-12 ml-64 mr-64">
+            <section id="gallery">
+                <h2 class="shadow-md rounded-lg text-2xl font-bold mb-6 bg-gray-800 text-center w-full py-2 text-gray-200">
+                    All Artworks
+                </h2>
+
+                <div class="columns-2 gap-6 space-y-6">
+                    <a href="Goku.html" class="block">
+                        <img src="images/art6.jpg" alt="Artwork 6" class="w-full h-auto rounded-lg shadow-md">
+                    </a>
+                    <a href="Flora's_Radiance.html" class="block">
+                        <img src="images/art1.png" alt="Artwork 1" class="w-full h-auto rounded-lg shadow-md">
+                    </a>
+                    <a href="Morena_Girl.html" class="block">
+                        <img src="images/art4.jpeg" alt="Artwork 4" class="w-full h-auto rounded-lg shadow-md">
+                    </a>
+                    <a href="Still_Alive.html" class="block">
+                        <img src="images/art5.jpg" alt="Artwork 5" class="w-full h-auto rounded-lg shadow-md">
+                    </a>
+                    <a href="Western_Girl.html" class="block">
+                        <img src="images/art2.jpeg" alt="Artwork 2" class="w-full h-auto rounded-lg shadow-md">
+                    </a>
+                    <a href="Gregoria_Spirit.html" class="block">
+                        <img src="images/art3.jpg" alt="Artwork 3" class="w-full h-auto rounded-lg shadow-md">
+                    </a>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Right Sidebar -->
+        <aside class="w-64 bg-gray-800 shadow-md h-screen fixed top-16 right-0 p-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-300">Quotes:</h2>
+            <ul class="space-y-3">
+                <li><p>“If you hear a voice within you say, ‘You cannot paint,’ then by all means paint, and that voice will be silenced”<br>– <b>Vincent Van Gogh</b></p></li>
+                <li><br><p>“We don’t make mistakes, just happy little accidents.”<br>– <b>Bob Ross</b></p></li>
+                <li><br><p>“Creativity is contagious, pass it on.”<br>– <b>Albert Einstein</b></p></li>
+                <li><br><p>“Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep.”<br>– <b>Scott Adams</b></p></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>
